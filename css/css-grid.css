@@ -1,0 +1,205 @@
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 20% 80% ;
+
+}
+.grid-item {
+  background-color:white;
+  border-radius:5px;
+  border: none;
+  font-size: 30px;
+  text-align: center;
+}
+input {
+  width: 90%;
+  direction: ltr;
+  text-align:center;
+  display: inline-block;
+  border:  1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 20px;
+ 
+}
+
+
+input[type=submit] {
+    color: white;
+    font-size: 25px;
+  background-color: #45a049; ;
+  cursor: pointer;
+  border:none;
+}
+input{
+   margin-bottom:10px; 
+}
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  font-weight: bold;
+  font-size: 20px;
+  width: 100%;
+}
+
+ td,  th {
+   border:none;
+   
+  padding: 8px;
+  text-align:right;
+}
+
+ tr:nth-child(even){background-color: white;}
+
+ tr:hover {background-color:red;
+color: white;
+
+}
+
+ th {
+  padding-top: 12px;
+  font-weight: bold;
+  padding-bottom: 12px;
+  background-color: #4CAF50;
+  color: white;
+}
+#add,#delete,input{
+font-weight:bolder;
+    font-size:20px;
+}
+#add,#delete{
+width:50px;
+    margin-right:10px;
+}
+
+
+#sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+ 
+
+  font-size: 20px;
+}
+.sidenav {
+  height: 100%;
+  width:20%;
+  position: fixed;
+  z-index: 1;
+  
+
+  overflow-x: hidden;
+  padding-top: 0px;
+}
+
+.sidenav a,#config a{
+  
+
+  margin-top:5px;
+  text-decoration: none;
+  font-size: 25px;
+ color: black;
+  display: block;
+}
+
+.sidenav a:hover {
+   color: white;
+   background-color: red;
+}
+#config th,#config td{
+
+  text-align: center;
+}
+#whatsapp{
+  text-align: center;
+  width: 90%;
+background-color: green;
+  margin-top:5px;
+  text-decoration: none;
+  font-size: 25px;
+ color: white;
+ border-radius: 10px;
+  display: block;
+}
+
+#no-hover tr:hover{
+background-color: white;
+color: black;
+border: none;
+}
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+
+.my-float{
+	margin-top:22px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
