@@ -82,14 +82,14 @@ include 'css/css-grid.css';
 
            <input type="text" readonly autocomplete="off" id="customer" name="customer_name"  value="<?php echo $row['customer_name'];?>" required>
                 <input type="number" readonly value="<?php echo $row['balance'];?>" id="n1" required>
-        <input type="number" autocomplete="off"  value="0" onchange="calc();" id="n2" required>
+        <input type="number" autocomplete="off"  value="0" oninput ="calc();" id="n2" required>
     
         <input type="text"  readonly  name="balance"  id="result" required>
                 <input type="submit" name="update" value="تسديد دفعه">
                <center>
                <a id="whatsapp" href = "javascript:;" onclick = "this.href='https:/'+'/'+'api.whatsapp.com/send?phone=' +''+
                  document.getElementById('numb').value +'&'+
-            'text='+ document.getElementById('customer').value +' تم تسديد ' +document.getElementById('n2').value +' باقي ' +document.getElementById('result').value +'شكرا لكم لاختياركم omar.net'
+            'text='+ document.getElementById('customer').value +' تم تسديد ' +document.getElementById('n2').value +' باقي ' +document.getElementById('result').value +' شكرا لكم لاختياركم omar net '
             " target="_blank">رسالة واتساب </a>
                
                
@@ -133,9 +133,27 @@ ob_end_flush();
 
 <script>
               
-function calc()
-            {
-                var n1 = parseFloat(document.getElementById('n1').value);
-                var n2 = parseFloat(document.getElementById('n2').value);
-                    document.getElementById('result').value = n1-n2;}
+function calc(){
+
+
+        var paid= parseFloat(document.getElementById('n2').value);
+
+        
+        
+
+            
+        
+        if(paid<0 || paid=='' || paid> document.getElementById('n1').value)
+        {
+            document.getElementById('result').value=document.getElementById('n1').value;
+        }
+        else{
+            document.getElementById('result').value=
+            document.getElementById('n1').value- document.getElementById('n2').value;
+
+
+        }
+
+        calc();
+    }
 </script>
